@@ -1,0 +1,1 @@
+非常重要的report组件，Monaco外界传进来
