@@ -4,8 +4,8 @@ import { Button, ConfigProvider, Space, theme, Typography } from 'antd';
 // import { CanyonCardPrimary } from 'canyon-ui';
 import { useState } from 'react';
 
-import cart from './cart.json';
-import {CanyonBillingCollapse, CanyonBillingRadio, CanyonCardPrimary} from '../../components';
+import cart from '../../../assets/cart.json';
+import {CanyonBillingCollapse, CanyonBillingRadio, CanyonCardPrimary} from '../../../components';
 const { Text } = Typography;
 // import {Text} from "echarts/types/src/util/graphic";
 // console.log(ss,'ss')

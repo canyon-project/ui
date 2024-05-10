@@ -32,8 +32,8 @@ const { useToken } = theme;
 const { Title, Text } = Typography;
 // import { useNavigate } from 'react-router-dom';
 
-import c from './cart.json';
-import {CanyonBillingCollapse, CanyonBillingUpdateCard, CanyonCardPrimary, CanyonTextTitle} from "../../components";
+import c from '../../../assets/cart.json';
+import {CanyonBillingCollapse, CanyonBillingUpdateCard, CanyonCardPrimary, CanyonTextTitle} from "../../../components";
 // import {CanyonCardPrimary} from "canyon-ui/src";
 const items: DescriptionsProps['items'] = [
   {
