@@ -1,21 +1,37 @@
 import { PlusOutlined } from '@ant-design/icons';
 // import { useRequest } from 'ahooks';
 import {Button, Drawer, Form, message, Popconfirm, Select, Table, Tooltip} from 'antd';
-import {useState} from "react";
+import { FC, useState } from 'react';
 
 // import request from '../../../helpers/request.ts';
 
 
+/**
+ * noop is a helper function that does nothing
+ * @returns undefined
+ */
+function noop() {
+  /** no-op */
+}
 
-const Members = ({
+// 注意多默认值
+// noob函数
+
+interface CrudTableProps{
+  
+}
+
+const CrudTable = ({
     dataSource,
     loading,
-    onCreate,
-    onDelete,
-    onUpdate,
-                     columns,
-                     formItems
-                 }) => {
+                   columns,
+                   formItems
+    /* === */
+    onCreate=noop,
+    onDelete=noop,
+    onUpdate=noop,
+
+                 }):FC<CrudTableProps> => {
     const [visible, setVisible] = useState(false);
     const [form] = Form.useForm();
     function onFinish(values) {
@@ -83,4 +99,4 @@ const Members = ({
     );
 };
 
-export default Members;
+export default CrudTable;
