@@ -1,0 +1,1 @@
+export { default as CanyonTableCrud } from './crud.tsx';
