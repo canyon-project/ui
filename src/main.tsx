@@ -1,3 +1,4 @@
+import './useWorker.ts';
 import './index.css';
 import 'antd/dist/reset.css';
 

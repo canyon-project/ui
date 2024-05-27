@@ -1,6 +1,6 @@
 export * from './card';
 export * from './layout';
-export * from './modal';
-export * from './page';
-export * from './table';
+// export * from './modal';
+// export * from './page';
+// export * from './table';
 export * from './text';
