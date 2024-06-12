@@ -1,1 +1,1 @@
-export { default as HomepageLearn } from './Learn';
+export { default as HomepageLearn } from './learn';
