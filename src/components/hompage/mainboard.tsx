@@ -15,9 +15,10 @@ const HomepageMainboard: FC = () => {
           </Button>
 
           <h1 className={'text-4xl mb-5'} style={{ lineHeight: '1.5', fontWeight: 'normal' }}>
-            <span className=''>Expo and EAS are</span>
+            <span className=''>AREX is</span>
             <br />
-            an ecosystem of tools that help you <br />
+            a testing platform with real data
+            <br />
             <span className='inline-block pb-2 px-2 rounded-md bg-blue-100 text-blue-500 text-4xl mr-2'>
               mock
             </span>
@@ -30,10 +31,9 @@ const HomepageMainboard: FC = () => {
             </span>
           </h1>
 
-          <p className={'text-[#687076] mb-10'} style={{ fontSize: '18px' }}>
-            AREX is a tool that automates regression testing by recording real traffic from
-            <br /> the online environment to the test environment, solving the problem of regression
-            testing.
+          <p className={'text-[#687076] mb-10'} style={{ fontSize: '18px', lineHeight: '1.5' }}>
+            AREX solves regression testing challenges by replicating real online traffic to the test
+            environment for automated regression testing. Iterate with confidence.
           </p>
 
           <div className={'gap-2 flex'}>
@@ -48,7 +48,9 @@ const HomepageMainboard: FC = () => {
           </div>
         </div>
 
-        <div style={{ width: '600px' }} className={'bg-pink-300'}></div>
+        <div style={{ width: '600px' }} className={''}>
+          <img src="/img/img.png" className={'w-[600px]'} alt="" />
+        </div>
       </div>
     </Margin>
   );
