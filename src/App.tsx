@@ -1,12 +1,12 @@
+import { ExperimentOutlined } from '@ant-design/icons';
+
+import RegionForm from './components/form/region.tsx';
 import Companies from './components/hompage/companies.tsx';
 import Feedback from './components/hompage/feedback.tsx';
 import Learn from './components/hompage/learn.tsx';
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
 import HomepageMainboard from './components/hompage/mainboard.tsx';
 import Pinglun from './components/hompage/pinglun.tsx';
 import Workflows from './components/hompage/workflows.tsx';
-// import './App.css'
 
 function App() {
   const companiesDataSource = [
@@ -37,6 +37,17 @@ function App() {
   ];
   return (
     <>
+      <div className={'p-20'}>
+        <RegionForm
+          title={'Coverage'}
+          icon={<ExperimentOutlined />}
+          onAdd={() => {
+            console.log('???');
+          }}
+        >
+          neirong
+        </RegionForm>
+      </div>
       <HomepageMainboard />
       <Companies dataSource={companiesDataSource} topRightButton={<div>1122</div>} />
       <Learn />

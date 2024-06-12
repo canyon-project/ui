@@ -4,7 +4,7 @@ import { FC } from 'react';
 
 import Margin from '../margin.tsx';
 const { Text } = Typography;
-const Ig = ({url}:any) => {
+const Ig = ({ url }: any) => {
   return (
     <div className={'w-[480px] relative'}>
       <em
@@ -22,11 +22,7 @@ const Ig = ({url}:any) => {
         confident with TypeScript.
       </Text>
       <div className='pt-3'>
-        <img
-          src={url}
-          alt='File-based routing'
-          className={'w-[480px]'}
-        />
+        <img src={url} alt='File-based routing' className={'w-[480px]'} />
       </div>
     </div>
   );

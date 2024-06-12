@@ -6,10 +6,8 @@ import Margin from '../margin.tsx';
 
 const contentStyle: React.CSSProperties = {
   height: '160px',
-  // color: '#fff',
   lineHeight: '160px',
   textAlign: 'center',
-  // background: '#364d79',
 };
 
 const Companies: FC<{
@@ -22,7 +20,7 @@ const Companies: FC<{
   return (
     <Margin>
       <div className={'flex justify-between mb-10'}>
-        <span style={{fontWeight:500,fontSize:16}}>Trusted by top companies</span>
+        <span style={{ fontWeight: 500, fontSize: 16 }}>Trusted by top companies</span>
         <Button shape={'round'}>
           Read Their Stories
           <ArrowRightOutlined />

@@ -49,7 +49,7 @@ const HomepageMainboard: FC = () => {
         </div>
 
         <div style={{ width: '600px' }} className={''}>
-          <img src="/img/img.png" className={'w-[600px]'} alt="" />
+          <img src='/img/img.png' className={'w-[600px]'} alt='' />
         </div>
       </div>
     </Margin>

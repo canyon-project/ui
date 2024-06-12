@@ -26,6 +26,6 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - run: pnpm install
       - run: pnpm run build-npm
-      - run: pnpm --filter=canyon-ui2 publish -f --no-git-checks --access=public --filter
+      - run: pnpm --filter=canyon-ui publish -f --no-git-checks --access=public --filter
         env:
           NODE_AUTH_TOKEN: ${{secrets.NODE_AUTH_TOKEN}}

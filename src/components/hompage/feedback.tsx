@@ -1,6 +1,5 @@
 import { ArrowRightOutlined, IssuesCloseOutlined } from '@ant-design/icons';
 
-
 const Feedback = () => {
   return (
     <div className={'w-[1000px] m-auto py-24'}>
