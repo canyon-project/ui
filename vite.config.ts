@@ -10,7 +10,7 @@ export default defineConfig({
     Pages({
       exclude: ['**/helper/**'],
     }),
-    dts(),
+    // dts(),
   ],
   build:
     process.env.USE_DTS_PLUGIN === 'true'

@@ -1,4 +1,4 @@
-import { ArrowRightOutlined, RightOutlined } from '@ant-design/icons';
+import { ArrowRightOutlined } from '@ant-design/icons';
 import { Button, Carousel } from 'antd';
 import React, { FC } from 'react';
 

@@ -1,8 +1,6 @@
 import { ArrowRightOutlined, IssuesCloseOutlined } from '@ant-design/icons';
-import { Card } from 'antd';
 
-import Margin from '../margin.tsx';
-const { Meta } = Card;
+
 const Feedback = () => {
   return (
     <div className={'w-[1000px] m-auto py-24'}>

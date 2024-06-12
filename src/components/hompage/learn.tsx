@@ -1,6 +1,5 @@
-import { FC } from 'react';
 
-const Learn: FC = () => {
+const Learn = () => {
   return (
     <>
       <section className='bg-black text-[#ecedee] py-28'>
