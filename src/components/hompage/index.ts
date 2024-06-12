@@ -1,1 +1,1 @@
-export { default as HomepageLearn } from './Learn.tsx';
+export { default as HomepageLearn } from './Learn';
