@@ -14,7 +14,7 @@ const TextTypography: FC<TextTypographyProps> = ({
 }) => {
 	return (
 		<div style={style} className={"flex justify-between items-center mb-5"}>
-			<Space style={{ fontSize: "25px" }}>
+			<Space style={{ fontSize: "25px",fontWeight:500 }}>
 				<span className={"text-[#687076] text-[32px]"}>{icon}</span>
 				{title}
 			</Space>
