@@ -12,6 +12,7 @@ export default defineConfig({
     }),
     // dts(),
   ],
+  base: '/ui/',
   build:
     process.env.USE_DTS_PLUGIN === 'true'
       ? {
