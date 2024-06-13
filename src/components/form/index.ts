@@ -1,1 +1,1 @@
-export { default as FormRegion } from './region';
+export { default as FormRegion } from "./region";
