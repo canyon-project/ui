@@ -48,16 +48,16 @@ const HomepageMainboard: FC = () => {
           </div>
         </div>
 
-        <div style={{ width: '600px' }} className={'relative'}>
-          <img src='/img/bg11.png' className={'w-[600px]'} alt='' />
+        <div style={{ width: '600px',height:'500px' }} className={'relative flex justify-center items-center'}>
+          <img src='/img/bg11.png' className={'w-[450px]'} alt='' />
           <img
             src='/img/img_2.png'
-            className={'w-[400px] top-[0px] right-[-156px] absolute'}
+            className={'w-[320px] top-[21px] right-[-67px] absolute'}
             alt=''
           />
           <img
             src='/img/img_1.png'
-            className={'w-[450px] bottom-[0px] left-[-100px] absolute'}
+            className={'w-[350px] bottom-[6px] left-[-60px] absolute'}
             alt=''
           />
         </div>
