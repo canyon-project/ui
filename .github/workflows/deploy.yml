@@ -2,26 +2,30 @@ name: Deploy
 
 on:
   push:
-    branches:
-      - '*'
+    branches: [ "*" ]
 
 jobs:
-  build:
-    name: Build
+  install:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 9
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
-
-      - name: Install dependencies
-        uses: bahmutov/npm-install@v1
-
-      - name: Build project
-        run: npm run build
+  publish-npm:
+    needs: [install]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 9
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 20
+          registry-url: https://registry.npmjs.org/
+      - run: pnpm install
+      - run: pnpm run build-npm
 
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v4
