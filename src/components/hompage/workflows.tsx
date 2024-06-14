@@ -4,7 +4,7 @@ import type { FC } from "react";
 
 import Margin from "../margin.tsx";
 const { Text } = Typography;
-const Ig = ({ url }: any) => {
+const Ig: FC<{ url: string }> = ({ url }) => {
 	return (
 		<div className={"w-[480px] relative"}>
 			<em

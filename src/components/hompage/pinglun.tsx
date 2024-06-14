@@ -12,9 +12,12 @@ const Pinglun = () => {
 						}
 					}
 				>
-					{[0, 1, 2, 0, 1].map((i, index) => {
+					{[0, 1, 2, 0, 1].map((_, index) => {
 						return (
-							<div className={"flex items-center justify-center"}>
+							<div
+								className={"flex items-center justify-center"}
+								key={String(index)}
+							>
 								<div
 									className={
 										"inline-block shadow border p-5 w-[360px] rounded bg-white "

@@ -1,13 +1,9 @@
-import { ExperimentOutlined, RightSquareFilled } from "@ant-design/icons";
-
-import RegionForm from "./components/form/region.tsx";
 import Companies from "./components/hompage/companies.tsx";
 import Feedback from "./components/hompage/feedback.tsx";
 import Learn from "./components/hompage/learn.tsx";
 import HomepageMainBoard from "./components/hompage/mainboard.tsx";
 import Pinglun from "./components/hompage/pinglun.tsx";
 import Workflows from "./components/hompage/workflows.tsx";
-import { TextTypography } from "./components/typography";
 
 function App() {
 	const companiesDataSource = [
@@ -61,11 +57,11 @@ function App() {
 			{/*		neirong*/}
 			{/*	</RegionForm>*/}
 			{/*</div>*/}
-			<TextTypography
-				title={"hi"}
-				icon={<RightSquareFilled />}
-				right={"ssss"}
-			/>
+			{/*<TextTypography*/}
+			{/*	title={"hi"}*/}
+			{/*	icon={<RightSquareFilled />}*/}
+			{/*	right={"ssss"}*/}
+			{/*/>*/}
 			<HomepageMainBoard
 				banner={
 					<div>

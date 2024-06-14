@@ -4,12 +4,12 @@ const Feedback = () => {
 	return (
 		<div className={"w-[1000px] m-auto py-24"}>
 			<div className={"flex gap-6"}>
-				{[1, 2, 3, 4].map((i, index) => {
+				{[1, 2, 3, 4].map((_, index) => {
 					return (
 						<div
 							style={{ border: "1px solid #dfe3e6" }}
 							className={"w-full rounded shadow"}
-							key={index}
+							key={String(index)}
 						>
 							<div className={"h-[120px] flex items-center justify-center"}>
 								<IssuesCloseOutlined style={{ fontSize: 36 }} />
