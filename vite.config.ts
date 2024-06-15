@@ -3,7 +3,7 @@ import { resolve } from 'path';
 import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
 import Pages from 'vite-plugin-pages';
-// console.log(process.env)
+console.log(process.env)
 
 // https://vitejs.dev/config/
 export default defineConfig({
