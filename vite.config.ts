@@ -1,12 +1,25 @@
-import react from '@vitejs/plugin-react-swc';
+import react from '@vitejs/plugin-react';
 import { resolve } from 'path';
 import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
 import Pages from 'vite-plugin-pages';
+console.log(process.env)
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
-    react(),
+    react({
+      babel: {
+        plugins:[
+          'istanbul',
+          [
+            'canyon',
+            {
+              instrumentCwd: resolve('../..'),
+            },
+          ],
+        ],
+      },
+    }),
     Pages({
       exclude: ['**/helper/**'],
     }),
