@@ -16,7 +16,7 @@ export default defineConfig({
             {
               instrumentCwd: resolve('../..'),
               commitSha:process.env['GITHUB_SHA'],
-              projectID:process.env['GITHUB_REPOSITORY'],
+              projectID:process.env['GITHUB_REPOSITORY_ID'],
               branch:process.env['GITHUB_REF']
             },
           ],
