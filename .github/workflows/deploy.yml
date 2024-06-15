@@ -24,6 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       DSN: ${{secrets.DSN}}
+      REPORTER: ${{secrets.REPORTER}}
     steps:
       - name: Checkout
         uses: actions/checkout@v3
