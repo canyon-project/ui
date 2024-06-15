@@ -15,6 +15,9 @@ export default defineConfig({
             'canyon',
             {
               instrumentCwd: resolve('../..'),
+              commitSha:process.env['GITHUB_SHA'],
+              projectID:process.env['GITHUB_REPOSITORY'],
+              branch:process.env['GITHUB_REF']
             },
           ],
         ],
