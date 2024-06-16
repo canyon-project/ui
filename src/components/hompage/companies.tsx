@@ -7,8 +7,8 @@ import { createStyles } from "antd-style";
 import Margin from "../margin.tsx";
 
 const contentStyle: React.CSSProperties = {
-	height: "160px",
-	lineHeight: "160px",
+	height: "140px",
+	lineHeight: "140px",
 	textAlign: "center",
 };
 

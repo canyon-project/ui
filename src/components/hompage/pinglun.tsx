@@ -1,55 +1,55 @@
 import { Button } from "antd";
+import type { FC } from "react";
 import Marquee from "react-fast-marquee";
-const Pinglun = () => {
+
+const Pinglun: FC<{
+	dataSource: {
+		authorName: string;
+		authorNickname: string;
+		avatar: string;
+		comment: string;
+	}[];
+	onClickSignUp: () => void;
+}> = ({ dataSource, onClickSignUp }) => {
 	return (
 		<div className={"relative mb-[125px]"}>
 			<Marquee pauseOnHover>
-				<div
-					className={"gap-8 py-2 z-10 relative flex h-[300px] mr-8"}
-					style={
-						{
-							// border: '1px solid black',
-						}
-					}
-				>
-					{[0, 1, 2, 0, 1].map((_, index) => {
-						return (
-							<div
-								className={"flex items-center justify-center"}
-								key={String(index)}
-							>
+				<div className={"gap-8 py-2 z-10 relative flex h-[300px] mr-8"}>
+					{[...dataSource, ...dataSource].map(
+						({ authorName, authorNickname, avatar, comment }, index) => {
+							return (
 								<div
-									className={
-										"inline-block shadow border p-5 w-[360px] rounded bg-white "
-									}
-									style={{
-										border: "1px solid #dfe3e6",
-									}}
+									className={"flex items-center justify-center"}
+									key={String(index)}
 								>
-									<div className={"flex gap-2 pb-2"}>
-										<img
-											className={"w-[24px]"}
-											src="https://api.dicebear.com/7.x/miniavs/svg?seed=1"
-											alt=""
-										/>
+									<div
+										className={
+											"inline-block shadow border p-5 w-[360px] rounded bg-white "
+										}
+										style={{
+											border: "1px solid #dfe3e6",
+										}}
+									>
+										<div className={"flex gap-2 pb-2"}>
+											<img
+												className={"w-[24px] h-[24px]"}
+												src={avatar}
+												alt=""
+											/>
 
-										<div>
-											<div>Trevor Hartman</div>
-											<div className={"text-gray-600"}>@jamonholmgren</div>
+											<div>
+												<div>{authorName}</div>
+												<div className={"text-gray-600"}>@{authorNickname}</div>
+											</div>
+										</div>
+										<div className={""} style={{ lineHeight: 1.5 }}>
+											{comment}
 										</div>
 									</div>
-									<div className={""} style={{ lineHeight: 1.5 }}>
-										Arkansas Western District Court uses expo web. I chose @expo
-										because it was the fastest way for a single developer to
-										achieve our mandate—mobile/desktop/web.
-										{index % 2 === 0
-											? "fastest way for a single developer to achieve our mandate—mobile/desktop/web.fastest way for"
-											: ""}
-									</div>
 								</div>
-							</div>
-						);
-					})}
+							);
+						},
+					)}
 				</div>
 			</Marquee>
 
@@ -73,7 +73,12 @@ const Pinglun = () => {
 					<br />
 					and iterate with stability.
 				</h2>
-				<Button type={"primary"} className={"text-center"} size={"large"}>
+				<Button
+					type={"primary"}
+					className={"text-center"}
+					size={"large"}
+					onClick={onClickSignUp}
+				>
 					Sign Up
 				</Button>
 			</div>

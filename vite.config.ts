@@ -1,9 +1,8 @@
 import react from '@vitejs/plugin-react';
-import { resolve } from 'path';
+import { resolve } from 'node:path';
 import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
 import Pages from 'vite-plugin-pages';
-console.log(process.env)
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
@@ -14,9 +13,9 @@ export default defineConfig({
           [
             'canyon',
             {
-              commitSha:process.env['GITHUB_SHA'],
-              projectID:process.env['GITHUB_REPOSITORY_ID'],
-              branch:process.env['GITHUB_REF']
+              commitSha:process.env.GITHUB_SHA,
+              projectID:process.env.GITHUB_REPOSITORY_ID,
+              branch:process.env.GITHUB_REF
             },
           ],
         ],
