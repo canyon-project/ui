@@ -8,6 +8,9 @@ const Ig: FC<{ url: string; index: number; bgc: string }> = ({
 	url,
 	index,
 	bgc,
+  title,
+                                                               desc,
+                                                               img
 }) => {
 	return (
 		<div className={"w-[480px] relative"}>
@@ -19,16 +22,16 @@ const Ig: FC<{ url: string; index: number; bgc: string }> = ({
 				}}
 			/>
 			<h3 className="text-default text-[20px] font-semibold leading-[1.5] tracking-[-0.017rem] max-md-gutters:text-[18px] max-md-gutters:leading-[1.5555] max-sm-gutters:text-[16px] max-sm-gutters:leading-[1.625] mb-1">
-				Get Started with AREX Agent
+        {title}
 			</h3>
 			<Text
 				type={"secondary"}
 				className="font-normal text-[16px] leading-[1.625] tracking-[-0.011rem] text-secondary mb-6"
 			>
-				No code intrusion, minimal integration cost.
+        {desc}
 			</Text>
 			<div className="pt-3">
-				<img src={url} alt="File-based routing" className={"w-[480px]"} />
+        {img}
 			</div>
 		</div>
 	);
@@ -64,79 +67,99 @@ const Workflows: FC<{
 	}[];
 }> = ({ dataSource }) => {
 	return (
-		<Margin>
-			<div className={"pt-20"} />
-			{dataSource.map(({ title }, index) => {
-				return (
-					<div className={"relative"} key={String(index)}>
-						<div className={"flex items-center justify-center z-10 relative"}>
-							<div
-								className={
-									" rounded-[150px] w-[220px] h-[220px] flex justify-center items-center"
-								}
-								style={{
-									backgroundColor: bgcList[index].lv0,
-								}}
-							>
-								<div
-									className={
-										" rounded-[150px] w-[168px] h-[168px] flex flex-col items-center justify-center"
-									}
-									style={{
-										backgroundColor: bgcList[index].lv1,
-									}}
-								>
-									<CodepenOutlined
-										style={{ fontSize: 30, color: bgcList[index].lv3 }}
-									/>
-									<span
-										className={"text-[25px] font-semibold"}
-										style={{
-											color: bgcList[index].lv3,
-										}}
-									>
+    <Margin>
+      <div className={"pt-20"}/>
+      {dataSource.map(({title, children}, index) => {
+        return (
+          <div className={"relative"} key={String(index)}>
+            <div className={"flex items-center justify-center z-10 relative"}>
+              <div
+                className={
+                  " rounded-[150px] w-[220px] h-[220px] flex justify-center items-center"
+                }
+                style={{
+                  backgroundColor: bgcList[index].lv0,
+                }}
+              >
+                <div
+                  className={
+                    " rounded-[150px] w-[168px] h-[168px] flex flex-col items-center justify-center"
+                  }
+                  style={{
+                    backgroundColor: bgcList[index].lv1,
+                  }}
+                >
+                  <CodepenOutlined
+                    style={{fontSize: 30, color: bgcList[index].lv3}}
+                  />
+                  <span
+                    className={"text-[25px] font-semibold"}
+                    style={{
+                      color: bgcList[index].lv3,
+                    }}
+                  >
 										{title}
 									</span>
-								</div>
-							</div>
-						</div>
+                </div>
+              </div>
+            </div>
 
-						<div
-							style={{
-								backgroundColor: bgcList[index].lv2,
-							}}
-							className={" w-[1px] h-[100%] absolute left-1/2 top-0"}
-						/>
+            <div
+              style={{
+                backgroundColor: bgcList[index].lv2,
+              }}
+              className={" w-[1px] h-[100%] absolute left-1/2 top-0"}
+            />
 
-						<div className="relative grid grid-cols-2 gap-x-40 max-lg-gutters:mt-8 max-lg-gutters:grid-cols-auto-min-1 max-lg-gutters:gap-y-16 max-lg-gutters:pl-10">
-							<div className={"relative1 top-[50px] pt-[50px]"}>
-								<Ig
-									url={"/ui/img/workflows/img.png"}
-									index={0}
-									bgc={bgcList[index].lv2}
-								/>
-							</div>
-							<div className={"relative1 top-[150px] pt-[150px]"}>
-								<Ig
-									url={"/ui/img/workflows/img_1.png"}
-									index={1}
-									bgc={bgcList[index].lv2}
-								/>
-							</div>
-							<div className={"relative1 top-[250px]"}>
-								<Ig
-									url={"/ui/img/workflows/img_2.png"}
-									index={2}
-									bgc={bgcList[index].lv2}
-								/>
-							</div>
-						</div>
-					</div>
-				);
-			})}
-			{/*<div className={"h-[500px]"} />*/}
-		</Margin>
-	);
+            <div
+              className="relative grid grid-cols-2 gap-x-40 max-lg-gutters:mt-8 max-lg-gutters:grid-cols-auto-min-1 max-lg-gutters:gap-y-16 max-lg-gutters:pl-10">
+
+
+              {
+                children.map(({title, desc, img}, childrenindex) => {
+                  return <div className={"relative1 top-[50px]"} style={{
+                    paddingTop: `${(childrenindex < 2 ? (1 + childrenindex) : 0) * 50}px`
+                  }} key={String(childrenindex)}>
+                    <Ig
+                      title={title}
+                      desc={desc}
+                      img={img}
+                      index={childrenindex}
+                      bgc={bgcList[index].lv2}
+                    />
+                  </div>
+                })
+              }
+
+              {/*<div className={"relative1 top-[50px] pt-[50px]"}>*/}
+              {/*  <Ig*/}
+              {/*    url={"/ui/img/workflows/img.png"}*/}
+              {/*    index={0}*/}
+              {/*    bgc={bgcList[index].lv2}*/}
+              {/*	/>*/}
+              {/*</div>*/}
+              {/*<div className={"relative1 top-[150px] pt-[150px]"}>*/}
+              {/*	<Ig*/}
+              {/*		url={"/ui/img/workflows/img_1.png"}*/}
+              {/*		index={1}*/}
+              {/*		bgc={bgcList[index].lv2}*/}
+              {/*	/>*/}
+              {/*</div>*/}
+              {/*<div className={"relative1 top-[250px]"}>*/}
+              {/*	<Ig*/}
+              {/*		url={"/ui/img/workflows/img_2.png"}*/}
+              {/*		index={2}*/}
+              {/*		bgc={bgcList[index].lv2}*/}
+              {/*	/>*/}
+              {/*</div>*/}
+            </div>
+          </div>
+        );
+      })}
+      <div className={"pt-20"}/>
+      {/*<div className={"h-[500px]"} />*/}
+    </Margin>
+  );
 };
 
 export default Workflows;

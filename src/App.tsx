@@ -184,7 +184,7 @@ function App() {
 				}
 				copywriter={{
 					firstLine: "AREX Lets You",
-					secondLine: "Iterate Confidently, Innovate Fearlessly.",
+					secondLine: "Confidence in Every Iteration.",
 					threeCores: ["Capture", "Replay", "Analyze"],
 					introduction:
 						"AREX solves the challenges of automated testing by replicating real online traffic to the test environment for automated API testing.",
@@ -203,12 +203,61 @@ function App() {
 				dataSource={[
 					{
 						title: "Capture",
+            children:[
+              {
+                title:'Get Started with AREX Agent',
+                desc:`No code intrusion, minimal integration cost.`,
+                img:<img src="/ui/img/workflows/img_01.png" alt="" className={"w-[480px]"} />
+              },
+              {
+                title:'High Coverage Without Writing Tests',
+                desc:`Simply integrate AREX Agent into your application
+to automatically capture API calls as test cases.`,
+                img:<img src="/ui/img/workflows/img_02.png" alt="" className={"w-[480px]"} />
+              },
+              {
+                title:'Mock third party dependencies',
+                desc:`Record dependencies like DBs, redis, third-party services
+as mocks for more reliable, affordable testing.`,
+                img:<img src="/ui/img/workflows/img_03.png" alt="" className={"w-[480px]"} />
+              }
+            ]
 					},
 					{
 						title: "Replay",
+            children:[
+              {
+                title:'Automate Testing with Mocks',
+                desc:`Intercept and respond to third-party service calls with
+pre-recorded data, ensuring a rapid and reliable testing
+experience without the setup of test environment.`,
+                img:<img src="/ui/img/workflows/img_11.png" alt="" className={"w-[480px]"} />
+              },
+              {
+                title:'Data Security Assurance',
+                desc:`Provides granular permission control and automatic
+traffic desensitization to enhance your data security.`,
+                img:<img src="/ui/img/workflows/img_12.png" alt="" className={"w-[480px]"} />
+              }
+            ]
 					},
 					{
 						title: "Analyze",
+            children:[
+              {
+                title:`Intelligent Test Reporting`,
+                desc:`AREX will compare the API response to the previously captured
+response and a report will be generated, identifying potential
+code bugs through response discrepancies.`,
+                img:<img src="/ui/img/workflows/img_21.png" alt="" className={"w-[480px]"} />
+              },
+              {
+                title:`Accurate Noise Detection`,
+                desc:`AREX identifies noisy fields in the responses accurately
+like ( timestamps, random values) to ensure high quality tests.`,
+                img:<img src="/ui/img/workflows/img_22.png" alt="" className={"w-[480px]"} />
+              }
+            ]
 					},
 				]}
 			/>
