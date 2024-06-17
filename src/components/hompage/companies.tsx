@@ -3,7 +3,7 @@ import { Button, Carousel } from "antd";
 import type React from "react";
 import type { FC } from "react";
 
-import { createStyles } from "antd-style";
+// import { createStyles } from "antd-style";
 import Margin from "../margin.tsx";
 
 const contentStyle: React.CSSProperties = {
@@ -12,15 +12,15 @@ const contentStyle: React.CSSProperties = {
 	textAlign: "center",
 };
 
-const useStyles = createStyles(({ token: _, css }) => ({
-	carousel: css`.slick-dots>li.slick-active>button{
-    background: #f1f3f5;
-  }
-  .slick-dots>li>button:after{
-    background: #c1c8cd;
-  }
-`,
-}));
+// const useStyles = createStyles(({ token: _, css }) => ({
+// 	carousel: css`.slick-dots>li.slick-active>button{
+//     background: #f1f3f5;
+//   }
+//   .slick-dots>li>button:after{
+//     background: #c1c8cd;
+//   }
+// `,
+// }));
 const Companies: FC<{
 	topRightButton: React.ReactNode;
 	dataSource?: {
@@ -28,11 +28,11 @@ const Companies: FC<{
 		zIndex: number;
 	}[];
 }> = ({ dataSource = [] }) => {
-	const { styles, cx } = useStyles();
+	// const { styles, cx } = useStyles();
 
 	return (
 		<Margin>
-			<div className={cx(styles.carousel)}>
+			<div>
 				<div className={"flex justify-between mb-10"}>
 					<span style={{ fontWeight: 500, fontSize: 16 }}>
 						Trusted by top companies
