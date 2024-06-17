@@ -1,5 +1,4 @@
 import {
-	AlignRightOutlined,
 	CloudOutlined,
 	GithubOutlined,
 	MutedOutlined,
@@ -184,7 +183,7 @@ function App() {
 				}
 				copywriter={{
 					firstLine: "AREX Lets You",
-					secondLine: "Confidence in Every Iteration.",
+					secondLine: "Confident in Every Iteration.",
 					threeCores: ["Capture", "Replay", "Analyze"],
 					introduction:
 						"AREX solves the challenges of automated testing by replicating real online traffic to the test environment for automated API testing.",
@@ -204,11 +203,6 @@ function App() {
 					{
 						title: "Capture",
             children:[
-              {
-                title:'Get Started with AREX Agent',
-                desc:`No code intrusion, minimal integration cost.`,
-                img:<img src="/ui/img/workflows/img_01.png" alt="" className={"w-[480px]"} />
-              },
               {
                 title:'High Coverage Without Writing Tests',
                 desc:`Simply integrate AREX Agent into your application

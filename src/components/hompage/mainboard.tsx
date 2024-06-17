@@ -24,7 +24,7 @@ const HomepageMainBoard: FC<HomepageMainBoardProps> = ({
 }) => {
 	return (
 		<Margin>
-			<div className={"pb-28 pt-32 flex justify-between"}>
+			<div className={"pb-20 pt-32 flex justify-between"}>
 				<div style={{ width: "610px" }}>
 					<Button
 						shape="round"

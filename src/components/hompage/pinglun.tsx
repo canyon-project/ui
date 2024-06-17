@@ -69,9 +69,9 @@ const Pinglun: FC<{
 					className="text-center pt-20"
 					style={{ fontSize: "40px", fontWeight: "bolder" }}
 				>
-					Upgrade your team’s workflow
-					<br />
-					and iterate with stability.
+          Catch defects before production without needing to create
+          <br/>
+          or manage test data.
 				</h2>
 				<Button
 					type={"primary"}
