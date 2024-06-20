@@ -7,19 +7,19 @@ import Pages from 'vite-plugin-pages';
 export default defineConfig({
   plugins: [
     react({
-      babel: {
-        plugins:[
-          'istanbul',
-          [
-            'canyon',
-            {
-              commitSha:process.env.GITHUB_SHA,
-              projectID:process.env.GITHUB_REPOSITORY_ID,
-              branch:process.env.GITHUB_REF
-            },
-          ],
-        ],
-      },
+      // babel: {
+      //   plugins:[
+      //     'istanbul',
+      //     [
+      //       'canyon',
+      //       {
+      //         commitSha:process.env.GITHUB_SHA,
+      //         projectID:process.env.GITHUB_REPOSITORY_ID,
+      //         branch:process.env.GITHUB_REF
+      //       },
+      //     ],
+      //   ],
+      // },
     }),
     Pages({
       exclude: ['**/helper/**'],
