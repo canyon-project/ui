@@ -59,7 +59,7 @@ const Pinglun: FC<{
 				}
 			>
 				<img
-					src="/img/signup-stripes.svg"
+					src="/ui/img/signup-stripes.svg"
 					className="h-[100vw] w-[140vw]"
 					alt="pattern"
 				/>
