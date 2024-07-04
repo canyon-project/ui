@@ -1,13 +1,11 @@
 name: Npm Publish canyon-ui
 
-
 on:
   push:
     branches: [ "*" ]
 
 jobs:
   publish-npm:
-    needs: [install]
     runs-on: ubuntu-latest
     steps:
       - uses: pnpm/action-setup@v2
