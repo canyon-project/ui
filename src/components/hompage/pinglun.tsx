@@ -30,7 +30,7 @@ const Pinglun: FC<{
 											border: "1px solid #dfe3e6",
 										}}
 									>
-										<div className={"flex gap-2 pb-2"}>
+										<div className={"flex gap-2 pb-4 items-center"}>
 											<img
 												className={"w-[24px] h-[24px]"}
 												src={avatar}
@@ -38,11 +38,11 @@ const Pinglun: FC<{
 											/>
 
 											<div>
-												<div>{authorName}</div>
-												<div className={"text-gray-600"}>@{authorNickname}</div>
+												<div style={{fontSize:'14px'}}>{authorName}</div>
+												<div style={{fontSize:'13px'}} className={"text-gray-600"}>@{authorNickname}</div>
 											</div>
 										</div>
-										<div className={""} style={{ lineHeight: 1.5 }}>
+										<div className={""} style={{ lineHeight: 1.5,fontSize:'14px' }}>
 											{comment}
 										</div>
 									</div>

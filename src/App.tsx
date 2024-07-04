@@ -19,14 +19,14 @@ const pinglunDataSource = [
 	},
 	{
 		authorName: "Testing Technology Lead",
-		authorNickname: "UnitedImagingIntelligence",
+		authorNickname: "United Imaging Intelligence",
 		avatar: "/ui/img/pinglun/lyyl.png",
 		comment:
 			"With AREX, we have implemented full automation testing by using real production traffic, significantly improving testing and release efficiency.",
 	},
 	{
 		authorName: "Test Development Engineer",
-		authorNickname: "aFintechCompany",
+		authorNickname: "a fintech company",
 		avatar: "https://api.dicebear.com/7.x/miniavs/svg?seed=1",
 		comment: `Seeking platform integration in R&D, we found AREX's cost-effective open-source solution superior. Integrating its test pass rate into CI has significantly benefited our operations.`,
 	},
